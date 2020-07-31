@@ -58,7 +58,7 @@ function WithTemplate(template:string, hookId:string){
         const hookEL = document.getElementById(hookId);
         const p = new constructor();
 
-        if(hookEL){
+        if(hookEL){ 
             hookEL.innerHTML = template;
             hookEL.querySelector('h1')!.textContent = p.name
         }
@@ -66,7 +66,7 @@ function WithTemplate(template:string, hookId:string){
 }
 
 @WithTemplate('<h1>My Person Object</h1>','app')
-@Logger('Logging  -person')
+@Logger('Logging  -person') 
 class Person{
     name = 'sumit';
     constructor(){
