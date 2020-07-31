@@ -39,35 +39,39 @@
  * another generic function
  */
 
-  interface Lengthy{
-      length:number
-  }
+//   interface Lengthy{
+//       length:number
+//   }
 
 
-  function countAndDescribe<T extends Lengthy>(element:T):[T,string]{
-      let descriptionText = 'Got no value';
-      if(element.length === 1){
-          descriptionText = 'Got 1 element';
+//   function countAndDescribe<T extends Lengthy>(element:T):[T,string]{
+//       let descriptionText = 'Got no value';
+//       if(element.length === 1){
+//           descriptionText = 'Got 1 element';
 
-      } else if(element.length > 1){
-          descriptionText = 'Got' + element.length + 'elements';
-      }
-      return [element ,descriptionText]
-  }
+//       } else if(element.length > 1){
+//           descriptionText = 'Got' + element.length + 'elements';
+//       }
+//       return [element ,descriptionText]
+//   }
 
-  console.log(countAndDescribe(['hi','sumit choudhary']))
-
-
-  /**
-   * keyOf constraint
-   */
+//   console.log(countAndDescribe(['hi','sumit choudhary']))
 
 
-   function extractAndConvert<T extends object, U extends keyof T>(
-       obj:T,
-       key:U
-   ){
-       return 'Value' + obj[key];
-   }
+//   /**
+//    * keyOf constraint
+//    */
 
-   extractAndConvert({name:'Sumit'},'name')
+
+//    function extractAndConvert<T extends object, U extends keyof T>(
+//        obj:T,
+//        key:U
+//    ){
+//        return 'Value' + obj[key];
+//    }
+
+//    extractAndConvert({name:'Sumit'},'name')
+
+/**
+ * Generic utility Types
+ */
